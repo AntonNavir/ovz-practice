@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Главная</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Уроки добра</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/docSlider.css">
+  <!--Favicons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
+<script src="docSlider.js"></script>
+
 <body>
-	<video width="250px" autoplay muted loop>
-		<source src="video/logo_animation.webm" type="video/webm">	
-		<source src="video/logo_animation.mp4" type="video/mp4">
-		Sorry, but the video is not supported for your browser :(
-	</video>
+  <div class="docSlider">
+    <section id="page1">
+      <div class="banner_container">
+        <div class="banner_text">
+          <header>
+            <a>УРОКИ ДОБРА</a>
+            <a>О сайте</a>
+            <a>Истории</a>
+          </header>
+          <div class="banner_heading">
+            <h1>УРОКИ ДОБРА</h1>
+            <p>Мы разные, но мы вместе</p>
+          </div>
+        </div>
+        <video autoplay muted loop>
+          <source src="video/logo_animation.webm" type="video/webm">
+          <source src="video/logo_animation.mp4" type="video/mp4">
+          Sorry, but the video is not supported for your browser :(
+        </video>
+      </div>
+    </section>
+
+    <section id="page2">
+      <h1>ДОБРОТА В КАЖДОМ ИЗ НАС</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat illum necessitatibus debitis totam vel consectetur officiis culpa? Illo animi consequatur, provident, eligendi doloribus, quaerat corrupti deleniti esse cum commodi aperiam!</p>
+    </section>
+
+    <section id="page3">
+      <h1>ИСТОРИИ</h1>
+      <p>Им есть, что рассказать</p>
+      <div class="story_container">
+        <div class="story_card">
+          <img src="https://dummyimage.com/100.jpg?text=child" alt="child" class="story_image">
+          <p class="story_preview">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptates unde explicabo sapiente, dolorum totam!</p>
+          <button>Читать</button>
+        </div>
+        <div class="story_card">
+          <img src="https://dummyimage.com/100.jpg?text=child" alt="child" class="story_image">
+          <p class="story_preview">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptates unde explicabo sapiente, dolorum totam!</p>
+          <button>Читать</button>
+        </div>
+        <div class="story_card">
+          <img src="https://dummyimage.com/100.jpg?text=child" alt="child" class="story_image">
+          <p class="story_preview">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptates unde explicabo sapiente, dolorum totam!</p>
+          <button>Читать</button>
+        </div>
+        <div class="story_card">
+          <img src="https://dummyimage.com/100.jpg?text=child" alt="child" class="story_image">
+          <p class="story_preview">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptates unde explicabo sapiente, dolorum totam!</p>
+          <button>Читать</button>
+        </div>
+      </div>
+    </section>
+  </div>
 </body>
+<script>
+  docSlider.init();
+</script>
+
 </html>
