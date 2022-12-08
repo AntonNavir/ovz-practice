@@ -46,7 +46,7 @@ header a:last-child {
   flex-direction: column;
   justify-content: center;
 }
-video {
+iframe {
   height: 100vh;
 }
 
