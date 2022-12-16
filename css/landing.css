@@ -1,0 +1,143 @@
+/*******КОРЕНЬ**********/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --padding-horizontal: 2em;
+  --padding-vertical: 2em;
+  --banner-h1: #E2DB5A;
+  --banner-p: #FCF5E9;
+}
+
+/***СЕКЦИИ***/
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+section:not(#page1) {
+  padding: var(--padding-horizontal);
+}
+
+#page1 {
+  background-color: #d1110c;
+  /*background: linear-gradient(180deg, rgba(188,71,53,1) 0%, rgba(195,40,35,1) 50%);*/
+}
+#page2 {
+  background-color: orange;
+}
+
+#page3 {
+  background-color: purple;
+}
+
+/***ТЕКСТ***/
+h1 {
+  color: var(--banner-h1);
+  margin: 0;
+}
+
+p, a {
+  color: var(--banner-p);
+}
+
+
+/***СТРАНИЦА ПЕРВАЯ***/
+/**хедер**/
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header a {
+  margin: 0 1em;
+}
+
+header a:first-child {
+  margin-left: 0;
+}
+
+header a:last-child {
+  margin-right: 0;
+}
+
+/**Баннер**/
+.banner_container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.banner_text {
+  padding: var(--padding-vertical) var(--padding-horizontal);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+video {
+  height: 100vh;
+}
+
+
+/**Текст**/
+.banner_heading h1 {
+  font-size: 70px;
+}
+
+.banner_heading p {
+  font-size: 35px;
+}
+
+.banner_text>img {
+  height: 64px;
+}
+
+
+/***CТРАНИЦА ТРЕТЬЯ***/
+.story_container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 700px) {
+
+  /***CЕКЦИЯ ПЕРВАЯ***/
+  .banner_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  video {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    margin: auto;
+  }
+
+  .banner_text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    align-items: center;
+  }
+
+  #page1 {
+    background-color: black;
+  }
+
+  /**текст**/
+  .banner_heading>* {
+    text-align: center;
+  }
+}
