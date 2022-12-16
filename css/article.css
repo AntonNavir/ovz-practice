@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --padding-horizontal: 20%;
+  --padding-header: calc(var(--padding-horizontal) - 5%);
+  --padding-vertical: 2em;
+  --margin-main: 1em;
+  --img-size: 80%;
+  --banner-h1: #E2DB5A;
+  --banner-p: #FCF5E9;
+  --background-main: #F8EBD4;
+  --color-second: #1F092D;
+  --color-main:#B22C26;
+}
+
+
+/*******************/
+header {
+  background-color: var(--color-main);
+  display: flex;
+  padding: var(--padding-vertical) var(--padding-header);
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--banner-p);
+  margin: 0 1em;
+}
+header span{
+  text-align: center;
+}
+header > a:nth-child(2){
+  margin-left: 0;
+}
+header > a:last-child{
+  margin-right: 0;
+}
+header img{
+  margin-right: 1em;
+}
+.logo-home{
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.logo-home> span{
+ color: var(--banner-p);
+ font-weight: bold;
+
+}
+/*********/
+.sidebar {
+  position: fixed;
+}
+
+main{
+  padding: var(--padding-vertical) var(--padding-horizontal);
+  background-color: var(--background-main);
+}
+main > *:not(h1, h2){
+  margin: var(--margin-main) 0;
+}
+main > *:first-child{
+  margin-top: 0;
+}
+main > *:last-child{
+  margin-bottom: 0;
+}
+main img, main iframe{
+  max-width: var(--img-size);
+  margin: var(--margin-main) calc((100% - var(--img-size)) / 2);
+}
+iframe{
+  width: var(--img-size);
+	aspect-ratio: 16/9;
+}
+.img-title{
+  color: var(--color-second);
+  margin-top: calc(var(--margin-main) * -1);
+  text-align: center;
+  font-style: italic;
+}
+blockquote{
+  border-left: solid 3px var(--color-main);
+  padding-left: 3em;
+  position: relative;
+}
+blockquote:before{
+  font-family:Arial;
+  content: "\201C";
+  color: var(--color-main);
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+blockquote cite:before{
+  content: "—";
+  margin-right: 5px;
+}
+
+
+/****************/
+footer{
+  background-color: var(--color-second);
+  display: grid;
+  padding:  var(--padding-vertical) var(--padding-header);
+  grid-template-columns: 1fr repeat(3, 0.5fr);
+  row-gap: 1em;
+}
+footer img{
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+footer > span{
+  text-align: center;
+  color: var(--banner-p);
+}

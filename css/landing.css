@@ -80,7 +80,7 @@ header a:last-child {
   align-items: center;
 }
 
-video, .cvet {
+video {
   height: 100vh;
 }
 
